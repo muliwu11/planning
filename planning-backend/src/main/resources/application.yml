@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/planning
+    username: root
+    password: 986532asd
+  application:
+    name: planning
+  session:
+    timeout: 86400
+  main:
+    banner-mode: off
+  data:
+    redis:
+      port: 6379
+      host: localhost
+      database: 1
+server:
+  port: 8088
+  servlet:
+    context-path: /api
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: isDelete
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    banner: off
+  configuration:
+    #    ????
+#    map-underscore-to-camel-case: false
+    #    ????????
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
