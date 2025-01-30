@@ -14,7 +14,7 @@
             <result property="profile" column="profile" jdbcType="VARCHAR"/>
             <result property="email" column="email" jdbcType="VARCHAR"/>
             <result property="userRole" column="user_role" jdbcType="TINYINT"/>
-            <result property="plantCode" column="plant_code" jdbcType="BIGINT"/>
+            <result property="code" column="plant_code" jdbcType="BIGINT"/>
             <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
             <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
             <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>

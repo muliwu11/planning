@@ -9,9 +9,9 @@
             <result property="userId" column="user_id" jdbcType="BIGINT"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="TINYINT"/>
             <result property="priority" column="priority" jdbcType="TINYINT"/>
             <result property="tags" column="tags" jdbcType="VARCHAR"/>
-            <result property="status" column="status" jdbcType="INTEGER"/>
             <result property="startTime" column="start_time" jdbcType="DATE"/>
             <result property="endTime" column="end_time" jdbcType="DATE"/>
             <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
@@ -21,8 +21,9 @@
 
     <sql id="Base_Column_List">
         id,user_id,name,
-        description,priority,tags,
-        status,start_time,end_time,
-        is_delete,create_time,update_time
+        description,state,priority,
+        tags,start_time,
+        end_time,is_delete,create_time,
+        update_time
     </sql>
 </mapper>

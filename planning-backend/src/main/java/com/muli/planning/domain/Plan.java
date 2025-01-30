@@ -35,6 +35,11 @@ public class Plan implements Serializable {
     private String description;
 
     /**
+     * 任务状态（0未完成， 1已完成）
+     */
+    private Integer state;
+
+    /**
      * 优先级(默认0，中1，高2)
      */
     private Integer priority;
@@ -44,10 +49,6 @@ public class Plan implements Serializable {
      */
     private String tags;
 
-    /**
-     * 任务状态(未完成0，已完成1，已过期2)
-     */
-    private Integer status;
 
     /**
      * 开始时间
@@ -73,6 +74,7 @@ public class Plan implements Serializable {
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.UPDATE)
     private Date updateTime;
 
     @TableField(exist = false)

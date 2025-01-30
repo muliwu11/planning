@@ -62,7 +62,7 @@ public class User implements Serializable {
     /**
      * 用户编号（暴露给用户端的编号）
      */
-    private Long plantCode;
+    private Long code;
 
     /**
      * 逻辑删除（默认0,已删除1）
@@ -78,6 +78,7 @@ public class User implements Serializable {
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.UPDATE)
     private Date updateTime;
 
     @TableField(exist = false)

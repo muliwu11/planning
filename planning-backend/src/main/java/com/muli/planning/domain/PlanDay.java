@@ -3,6 +3,7 @@ package com.muli.planning.domain;
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 
@@ -35,6 +36,11 @@ public class PlanDay implements Serializable {
     private String description;
 
     /**
+     * 任务状态（0未完成， 1已完成）
+     */
+    private Integer state;
+
+    /**
      * 优先级(默认0，中1，高2)
      */
     private Integer priority;
@@ -63,6 +69,7 @@ public class PlanDay implements Serializable {
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.UPDATE)
     private Date updateTime;
 
     @TableField(exist = false)

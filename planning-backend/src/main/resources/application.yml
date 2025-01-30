@@ -15,6 +15,9 @@ spring:
       port: 6379
       host: localhost
       database: 1
+#  mvc:
+#    pathmatch:
+#      matching-strategy: ant_path_matcher
 server:
   port: 8088
   servlet:
@@ -27,7 +30,10 @@ mybatis-plus:
       logic-not-delete-value: 0
     banner: off
   configuration:
-    #    ????
-#    map-underscore-to-camel-case: false
-    #    ????????
+    #    驼峰命名
+    map-underscore-to-camel-case: true
+    #    日志输出在控制台
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+knife4j:
+  enable: true

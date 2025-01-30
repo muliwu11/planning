@@ -9,6 +9,7 @@
             <result property="userId" column="user_id" jdbcType="BIGINT"/>
             <result property="name" column="name" jdbcType="VARCHAR"/>
             <result property="description" column="description" jdbcType="VARCHAR"/>
+            <result property="state" column="state" jdbcType="TINYINT"/>
             <result property="priority" column="priority" jdbcType="TINYINT"/>
             <result property="count" column="count" jdbcType="INTEGER"/>
             <result property="startTime" column="start_time" jdbcType="TIMESTAMP"/>
@@ -19,8 +20,8 @@
 
     <sql id="Base_Column_List">
         id,user_id,name,
-        description,priority,count,
-        start_time,is_delete,create_time,
-        update_time
+        description,state,priority,
+        count,start_time,is_delete,
+        create_time,update_time
     </sql>
 </mapper>
